@@ -1,4 +1,4 @@
-package com.recette_me.recette.models;
+package com.recette_me.recette.dataPattern;
 
 import java.util.Date;
 
