@@ -1,6 +1,5 @@
 package com.recette_me.recette.dataPattern;
 
-import java.util.Date;
 
 import org.springframework.web.multipart.MultipartFile;
 

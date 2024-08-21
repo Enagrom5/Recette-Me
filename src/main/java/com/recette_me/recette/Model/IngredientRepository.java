@@ -2,8 +2,8 @@ package com.recette_me.recette.Model;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.recette_me.recette.dataPattern.Igredient;
+import com.recette_me.recette.dataPattern.Ingredient;
 
-public interface IngredientRepository extends JpaRepository<Igredient, Integer>{
+public interface IngredientRepository extends JpaRepository<Ingredient, Integer>{
 
 }
