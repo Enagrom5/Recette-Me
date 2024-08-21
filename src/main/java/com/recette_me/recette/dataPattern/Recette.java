@@ -20,9 +20,11 @@ public class Recette {
     private String titre;
     private String category;
     private String type;
+
     @Column(columnDefinition = "JSON")
     @JdbcTypeCode(SqlTypes.JSON)
     private HashMap<String,String> ingredient = new HashMap<>();
+    
     private int temperature;
     private int temps;
 
@@ -32,7 +34,7 @@ public class Recette {
     
     @ManyToOne
     @JoinColumn(name="user_id")
-    private int userId;
+    private User userId;
 
     @OneToMany (mappedBy = "recetteId")
     private List<Favori> favoris;
@@ -133,11 +135,11 @@ public class Recette {
         this.createdAt = createdAt;
     }
 
-    public int getUserId() {
+    public User getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(User userId) {
         this.userId = userId;
     }
 

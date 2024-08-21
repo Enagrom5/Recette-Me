@@ -12,11 +12,11 @@ public class Comment {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private int userId;
+    private User userId;
 
     @ManyToOne
     @JoinColumn(name = "recette_id")
-    private int recetteId;
+    private Recette recetteId;
 
     private int note;
 
@@ -31,19 +31,19 @@ public class Comment {
         this.id = id;
     }
 
-    public int getUserId() {
+    public User getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(User userId) {
         this.userId = userId;
     }
 
-    public int getRecetteId() {
+    public Recette getRecetteId() {
         return recetteId;
     }
 
-    public void setRecetteId(int recetteId) {
+    public void setRecetteId(Recette recetteId) {
         this.recetteId = recetteId;
     }
 
