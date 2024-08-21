@@ -3,6 +3,7 @@ package com.recette_me.recette.dataPattern;
 
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
@@ -33,9 +34,36 @@ public class Recette {
     @JoinColumn(name="user_id")
     private int userId;
 
+    @OneToMany (mappedBy = "recetteId")
+    private List<Favori> favoris;
+
+    @OneToMany (mappedBy = "recetteId")
+    private List<Comment> comments;
+    
+    public List<Favori> getFavoris() {
+        return favoris;
+    }
+
+
+    public void setFavoris(List<Favori> favoris) {
+        this.favoris = favoris;
+    }
+
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
+
+
     public int getId() {
         return id;
     }
+
 
     public void setId(int id) {
         this.id = id;

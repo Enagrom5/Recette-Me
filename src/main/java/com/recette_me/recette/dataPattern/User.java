@@ -24,6 +24,24 @@ public class User {
 
     @OneToMany (mappedBy = "userId")
     private List<Recette> recettes;
+
+    @OneToMany (mappedBy = "userId")
+    private List<Favori> favoris;
+
+    public List<Favori> getFavoris() {
+        return favoris;
+    }
+    public void setFavoris(List<Favori> favoris) {
+        this.favoris = favoris;
+    }
+    public List<Comment> getComments() {
+        return comments;
+    }
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
+    @OneToMany (mappedBy = "userId")
+    private List<Comment> comments;
     
     public int getId() {
         return id;
