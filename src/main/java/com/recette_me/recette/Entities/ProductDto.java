@@ -1,4 +1,4 @@
-package com.recette_me.recette.dataPattern;
+package com.recette_me.recette.Entities;
 
 
 import org.springframework.web.multipart.MultipartFile;

@@ -1,4 +1,4 @@
-package com.recette_me.recette.dataPattern.Recettes;
+package com.recette_me.recette.Entities.Recettes;
 
 
 import java.util.Date;
@@ -8,11 +8,12 @@ import java.util.List;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
 
-import com.recette_me.recette.dataPattern.Comments.Comment;
-import com.recette_me.recette.dataPattern.Favoris.Favori;
-import com.recette_me.recette.dataPattern.Users.User;
+import com.recette_me.recette.Entities.Comments.Comment;
+import com.recette_me.recette.Entities.Favoris.Favori;
+import com.recette_me.recette.Entities.Users.User;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name="Recettes")
@@ -21,19 +22,31 @@ public class Recette {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
-    private String titre;
+
+    @NotBlank(message = "Requis")
+    private String title;
+
+    @NotBlank(message = "Requis")
     private String category;
+
+    @NotBlank(message = "Requis")
     private String type;
 
+
+    @NotBlank(message = "Requis")
     @Column(columnDefinition = "JSON")
     @JdbcTypeCode(SqlTypes.JSON)
     private HashMap<String,String> ingredient = new HashMap<>();
     
     private int temperature;
+
+    @NotBlank(message = "Requis")
     private int temps;
 
+    @NotBlank(message = "Requis")
     @Column(columnDefinition = "TEXT")
     private String protocol;
+    
     private Date createdAt;
     
     @ManyToOne
@@ -76,11 +89,11 @@ public class Recette {
     }
 
     public String getTitre() {
-        return titre;
+        return title;
     }
 
-    public void setTitre(String titre) {
-        this.titre = titre;
+    public void setTitre(String title) {
+        this.title = title;
     }
 
     public String getCategory() {

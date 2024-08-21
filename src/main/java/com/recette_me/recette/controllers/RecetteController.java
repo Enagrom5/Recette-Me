@@ -1,4 +1,4 @@
-package com.recette_me.recette.controllers;
+package com.recette_me.recette.Controllers;
 
 public class RecetteController {
 

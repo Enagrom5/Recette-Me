@@ -1,4 +1,4 @@
-package com.recette_me.recette.controllers;
+package com.recette_me.recette.Controllers;
 
 import java.io.InputStream;
 import java.nio.file.*;
@@ -13,9 +13,9 @@ import org.springframework.validation.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.recette_me.recette.Model.ProductsRepository;
-import com.recette_me.recette.dataPattern.Product;
-import com.recette_me.recette.dataPattern.ProductDto;
+import com.recette_me.recette.Entities.Product;
+import com.recette_me.recette.Entities.ProductDto;
+import com.recette_me.recette.Repositories.ProductsRepository;
 
 import jakarta.validation.Valid;
 

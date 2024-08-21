@@ -1,8 +1,8 @@
-package com.recette_me.recette.Model;
+package com.recette_me.recette.Repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.recette_me.recette.dataPattern.Comments.Comment;
+import com.recette_me.recette.Entities.Comments.Comment;
 
 public interface CommentsRepository extends JpaRepository<Comment, Integer>{
 

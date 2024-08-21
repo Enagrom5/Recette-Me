@@ -1,13 +1,14 @@
-package com.recette_me.recette.dataPattern.Users;
+package com.recette_me.recette.Entities.Users;
 
 import java.util.Date;
 import java.util.List;
 
-import com.recette_me.recette.dataPattern.Comments.Comment;
-import com.recette_me.recette.dataPattern.Favoris.Favori;
-import com.recette_me.recette.dataPattern.Recettes.Recette;
+import com.recette_me.recette.Entities.Comments.Comment;
+import com.recette_me.recette.Entities.Favoris.Favori;
+import com.recette_me.recette.Entities.Recettes.Recette;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name="Users")
@@ -25,6 +26,7 @@ public class User {
     private String adress;
     private Date signInAt;
     private Date born;
+    private String imageFileName;
 
     @OneToMany (mappedBy = "userId")
     private List<Recette> recettes;
@@ -32,6 +34,12 @@ public class User {
     @OneToMany (mappedBy = "userId")
     private List<Favori> favoris;
 
+    public String getImageFileName() {
+        return imageFileName;
+    }
+    public void setImageFileName(String imageFileName) {
+        this.imageFileName = imageFileName;
+    }
     public List<Favori> getFavoris() {
         return favoris;
     }
