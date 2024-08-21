@@ -1,4 +1,4 @@
-package com.recette_me.recette.dataPattern;
+package com.recette_me.recette.dataPattern.Recettes;
 
 
 import java.util.Date;
@@ -7,6 +7,10 @@ import java.util.List;
 
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
+
+import com.recette_me.recette.dataPattern.Comments.Comment;
+import com.recette_me.recette.dataPattern.Favoris.Favori;
+import com.recette_me.recette.dataPattern.Users.User;
 
 import jakarta.persistence.*;
 

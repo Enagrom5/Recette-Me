@@ -1,7 +1,11 @@
-package com.recette_me.recette.dataPattern;
+package com.recette_me.recette.dataPattern.Users;
 
 import java.util.Date;
 import java.util.List;
+
+import com.recette_me.recette.dataPattern.Comments.Comment;
+import com.recette_me.recette.dataPattern.Favoris.Favori;
+import com.recette_me.recette.dataPattern.Recettes.Recette;
 
 import jakarta.persistence.*;
 

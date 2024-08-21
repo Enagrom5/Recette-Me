@@ -1,4 +1,7 @@
-package com.recette_me.recette.dataPattern;
+package com.recette_me.recette.dataPattern.Comments;
+
+import com.recette_me.recette.dataPattern.Recettes.Recette;
+import com.recette_me.recette.dataPattern.Users.User;
 
 import jakarta.persistence.*;
 
