@@ -1,4 +1,4 @@
-package com.recette_me.recette.Entities.Ingredients;
+package com.recette_me.recette.entities.Ingredients;
 
 import jakarta.persistence.*;
 

@@ -1,7 +1,7 @@
-package com.recette_me.recette.Entities.Favoris;
+package com.recette_me.recette.entities.Favoris;
 
-import com.recette_me.recette.Entities.Recettes.RecetteDto;
-import com.recette_me.recette.Entities.Users.UserDto;
+import com.recette_me.recette.entities.Recettes.RecetteDto;
+import com.recette_me.recette.entities.Users.UserDto;
 
 import jakarta.validation.constraints.NotEmpty;
 

@@ -1,4 +1,4 @@
-package com.recette_me.recette.Entities.Recettes;
+package com.recette_me.recette.entities.Recettes;
 
 
 import java.util.Date;
@@ -8,9 +8,9 @@ import java.util.List;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
 
-import com.recette_me.recette.Entities.Comments.Comment;
-import com.recette_me.recette.Entities.Favoris.Favori;
-import com.recette_me.recette.Entities.Users.User;
+import com.recette_me.recette.entities.Comments.Comment;
+import com.recette_me.recette.entities.Favoris.Favori;
+import com.recette_me.recette.entities.Users.User;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;

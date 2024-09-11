@@ -1,5 +1,8 @@
-package com.recette_me.recette.Controllers;
+package com.recette_me.recette.controllers;
 
+import org.springframework.stereotype.Controller;
+
+@Controller
 public class CommentsController {
 
 }

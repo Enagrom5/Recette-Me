@@ -1,8 +1,8 @@
-package com.recette_me.recette.Repositories;
+package com.recette_me.recette.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.recette_me.recette.Entities.Recettes.Recette;
+import com.recette_me.recette.entities.Recettes.Recette;
 
 public interface RecettesRepository extends JpaRepository<Recette, Integer>{
 

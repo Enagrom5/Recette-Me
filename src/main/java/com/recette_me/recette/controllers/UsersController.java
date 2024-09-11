@@ -1,5 +1,14 @@
-package com.recette_me.recette.Controllers;
+package com.recette_me.recette.controllers;
 
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+
+
+@RestController
+@RequestMapping("/users")
 public class UsersController {
 
+    
 }

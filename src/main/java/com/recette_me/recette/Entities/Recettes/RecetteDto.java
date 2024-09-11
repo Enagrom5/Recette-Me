@@ -1,8 +1,8 @@
-package com.recette_me.recette.Entities.Recettes;
+package com.recette_me.recette.entities.Recettes;
 
 import java.util.HashMap;
 
-import com.recette_me.recette.Entities.Users.UserDto;
+import com.recette_me.recette.entities.Users.UserDto;
 
 import jakarta.validation.constraints.NotEmpty;
 

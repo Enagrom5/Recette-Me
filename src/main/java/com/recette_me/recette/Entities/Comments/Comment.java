@@ -1,7 +1,7 @@
-package com.recette_me.recette.Entities.Comments;
+package com.recette_me.recette.entities.Comments;
 
-import com.recette_me.recette.Entities.Recettes.Recette;
-import com.recette_me.recette.Entities.Users.User;
+import com.recette_me.recette.entities.Recettes.Recette;
+import com.recette_me.recette.entities.Users.User;
 
 import jakarta.persistence.*;
 

@@ -1,4 +1,4 @@
-package com.recette_me.recette.Entities.Users;
+package com.recette_me.recette.entities.Users;
 
 import java.util.Date;
 

@@ -1,14 +1,14 @@
-package com.recette_me.recette.Entities.Users;
+package com.recette_me.recette.entities.Users;
 
 import java.util.Date;
 import java.util.List;
 
-import com.recette_me.recette.Entities.Comments.Comment;
-import com.recette_me.recette.Entities.Favoris.Favori;
-import com.recette_me.recette.Entities.Recettes.Recette;
+import com.recette_me.recette.entities.Comments.Comment;
+import com.recette_me.recette.entities.Favoris.Favori;
+import com.recette_me.recette.entities.Recettes.Recette;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
+
 
 @Entity
 @Table(name="Users")
