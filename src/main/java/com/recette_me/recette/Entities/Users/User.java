@@ -3,6 +3,7 @@ package com.recette_me.recette.entities.Users;
 import java.util.Date;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.recette_me.recette.entities.Comments.Comment;
 import com.recette_me.recette.entities.Favoris.Favori;
 import com.recette_me.recette.entities.Recettes.Recette;
@@ -29,9 +30,11 @@ public class User {
     private String imageFileName;
 
     @OneToMany (mappedBy = "userId")
+    @JsonManagedReference
     private List<Recette> recettes;
 
-    @OneToMany (mappedBy = "userId")
+    @OneToMany (mappedBy = "user")
+    @JsonManagedReference
     private List<Favori> favoris;
 
     public String getImageFileName() {

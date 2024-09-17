@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import org.springframework.stereotype.Controller;
+
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,7 +17,7 @@ import com.recette_me.recette.entities.Ingredients.Ingredient;
 
 import com.recette_me.recette.services.IngredentService;
 
-import jakarta.validation.Valid;
+
 
 
 // appel la fonction dans service et retourne le statut + le body avec la data

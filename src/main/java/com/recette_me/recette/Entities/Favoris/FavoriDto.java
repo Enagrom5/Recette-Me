@@ -1,33 +1,35 @@
 package com.recette_me.recette.entities.Favoris;
 
-import com.recette_me.recette.entities.Recettes.RecetteDto;
-import com.recette_me.recette.entities.Users.UserDto;
 
-import jakarta.validation.constraints.NotEmpty;
+
+
 
 public class FavoriDto {
+    private int userId;
+    private int recetteId;
 
-    @NotEmpty
-    private UserDto userId;
+    // Constructeurs, getters et setters
+    public FavoriDto() {}
 
-    @NotEmpty
-    private RecetteDto recetteId;
-
-    public UserDto getUserId() {
-        return userId;
-    }
-
-    public void setUserId(UserDto userId) {
+    public FavoriDto(int userId, int recetteId) {
         this.userId = userId;
-    }
-
-    public RecetteDto getRecetteId() {
-        return recetteId;
-    }
-
-    public void setRecetteId(RecetteDto recetteId) {
         this.recetteId = recetteId;
     }
 
-    
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    public int getRecetteId() {
+        return recetteId;
+    }
+
+    public void setRecetteId(int recetteId) {
+        this.recetteId = recetteId;
+    }
 }
+

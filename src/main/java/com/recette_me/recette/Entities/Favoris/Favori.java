@@ -1,5 +1,8 @@
 package com.recette_me.recette.entities.Favoris;
 
+
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.recette_me.recette.entities.Recettes.Recette;
 import com.recette_me.recette.entities.Users.User;
 
@@ -14,11 +17,13 @@ public class Favori {
     private int id;
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private User userId;
+    @JsonBackReference
+    private User user;
 
     @ManyToOne
     @JoinColumn(name = "recette_id")
-    private Recette recetteId;
+    @JsonBackReference
+    private Recette recette;
 
     public int getId() {
         return id;
@@ -28,21 +33,27 @@ public class Favori {
         this.id = id;
     }
 
-    public User getUserId() {
-        return userId;
+    public User getUser() {
+        return user;
     }
 
-    public void setUserId(User userId) {
-        this.userId = userId;
+    public void setUser(User user) {
+        this.user = user;
     }
 
-    public Recette getRecetteId() {
-        return recetteId;
+    public Recette getRecette() {
+        return recette;
     }
 
-    public void setRecetteId(Recette recetteId) {
-        this.recetteId = recetteId;
+    public void setRecette(Recette recette) {
+        this.recette = recette;
     }
+
+   
+
+    
+
+    
 
     
     

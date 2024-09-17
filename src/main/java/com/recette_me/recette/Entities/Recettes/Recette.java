@@ -8,6 +8,8 @@ import java.util.List;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.recette_me.recette.entities.Comments.Comment;
 import com.recette_me.recette.entities.Favoris.Favori;
 import com.recette_me.recette.entities.Users.User;
@@ -51,12 +53,15 @@ public class Recette {
     
     @ManyToOne
     @JoinColumn(name="user_id")
+    @JsonBackReference
     private User userId;
 
-    @OneToMany (mappedBy = "recetteId")
+    @OneToMany (mappedBy = "recette")
+    @JsonManagedReference
     private List<Favori> favoris;
 
     @OneToMany (mappedBy = "recetteId")
+    @JsonManagedReference
     private List<Comment> comments;
     
     public List<Favori> getFavoris() {
@@ -88,11 +93,11 @@ public class Recette {
         this.id = id;
     }
 
-    public String getTitre() {
+    public String getTitle() {
         return title;
     }
 
-    public void setTitre(String title) {
+    public void setTitle(String title) {
         this.title = title;
     }
 
