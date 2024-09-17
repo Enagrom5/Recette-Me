@@ -8,8 +8,6 @@ public class FavoriDto {
     private int userId;
     private int recetteId;
 
-    // Constructeurs, getters et setters
-    public FavoriDto() {}
 
     public FavoriDto(int userId, int recetteId) {
         this.userId = userId;

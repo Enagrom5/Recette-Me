@@ -1,24 +1,30 @@
 package com.recette_me.recette.entities.Comments;
 
-import com.recette_me.recette.entities.Recettes.RecetteDto;
-import com.recette_me.recette.entities.Users.UserDto;
 
-import jakarta.validation.constraints.*;
+
 
 public class CommentDto {
 
-    @NotEmpty (message = "Vous devez mettre une note")
+
+    
     private int note;
 
-    @NotEmpty ()
-    private UserDto userId;
+    
+    private int userId;
 
-    @NotEmpty
-    private RecetteDto recetteId;
+    
+    private int recetteId;
 
-    @Size(min=10, message="Le commentaire doit faire au minimum 10 charactères")
-    @Size(max=2000, message="Trop de charactère")
+    
     private String userComment;
+
+    public CommentDto (int note, int userId, int recetteId, String userComment){
+        this.note = note;
+        this.userId = userId;
+        this.recetteId = recetteId;
+        this.userComment = userComment;
+
+    }
 
     public int getNote() {
         return note;
@@ -28,19 +34,19 @@ public class CommentDto {
         this.note = note;
     }
 
-    public UserDto getUserId() {
+    public int getUserId() {
         return userId;
     }
 
-    public void setUserId(UserDto userId) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 
-    public RecetteDto getRecetteId() {
+    public int getRecetteId() {
         return recetteId;
     }
 
-    public void setRecetteId(RecetteDto recetteId) {
+    public void setRecetteId(int recetteId) {
         this.recetteId = recetteId;
     }
 
@@ -53,5 +59,4 @@ public class CommentDto {
     }
 
     
-
 }

@@ -1,5 +1,6 @@
 package com.recette_me.recette.entities.Comments;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.recette_me.recette.entities.Recettes.Recette;
 import com.recette_me.recette.entities.Users.User;
 
@@ -15,10 +16,12 @@ public class Comment {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
+    @JsonBackReference
     private User userId;
 
     @ManyToOne
     @JoinColumn(name = "recette_id")
+    @JsonBackReference
     private Recette recetteId;
 
     private int note;
