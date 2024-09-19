@@ -28,6 +28,7 @@ public class Comment {
 
     @Column (columnDefinition = "TEXT")
     private String userComment;
+    
 
     public int getId() {
         return id;

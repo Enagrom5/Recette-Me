@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.recette_me.recette.entities.Comments.Comment;
@@ -61,6 +63,13 @@ public class CommentsController {
             return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
         }
 }
+
+    //Modifier un comment
+
+    @PutMapping("comments/{id}")
+    public String modifieComment(@PathVariable int id, @RequestBody CommentDto newComment) throws Exception{
+        return CommentService.modifComment(id, newComment);
+    }
 
     //Supprime un comment
     @DeleteMapping("comments/delete/{id}")

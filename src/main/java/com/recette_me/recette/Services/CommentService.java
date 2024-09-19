@@ -2,6 +2,7 @@ package com.recette_me.recette.services;
 
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -51,6 +52,20 @@ public class CommentService {
         comment.setUserComment(CommentReceived.getUserComment());
         
         return commentsRepo.save(comment);
+    }
+
+    public String modifComment(int id, CommentDto newComment) throws Exception{
+        try {
+            Comment comment = commentsRepo.findById(id).orElseThrow(() -> new Exception("Utilisateur non trouvé"));
+            comment.setNote(newComment.getNote());
+            comment.setUserComment(newComment.getUserComment());
+            commentsRepo.save(comment);
+            
+            
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return "Commentaire modifié";
     }
 
     public String delete(int id){
